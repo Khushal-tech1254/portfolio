@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    font-family: Arial, sans-serif;
+
+    background: #eee9ff;
+    color: #2d2342;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    z-index: 1000;
+
+    background: rgba(238, 233, 255, 0.75);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(100, 80, 150, 0.15);
+}
+
+.logo {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #3d2b63;
+}
+
+.navbar ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+
+    color: #3d2b63;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #8a68c7;
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+.home {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8% 60px;
+
+    background: #eee9ff;
+}
+
+
+/* =========================================
+   BACKGROUND VIDEO
+========================================= */
+
+.home-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+       Video stays inside the screen.
+    */
+    object-fit: fill;
+
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   VIDEO OVERLAY
+========================================= */
+
+.video-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(238, 233, 255, 0.12);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   HOME CONTENT
+========================================= */
+
+.home-contents {
+    position: relative;
+
+    z-index: 2;
+
+    width: 50%;
+    max-width: 600px;
+}
+
+.home-contents h4 {
+    font-size: 18px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+
+    color: #72549e;
+}
+
+.home-contents h1 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+
+    color: #34234f;
+}
+
+.home-contents p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 500px;
+
+    color: #55466c;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.home-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+.home-buttons a {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 1s;
+}
+
+.btn-primary {
+    background: #8061b5;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #69489e;
+
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid #8061b5;
+
+    color: #69489e;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background: #8061b5;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    background: #f5f1ff;
+}
+
+.about-heading {
+    margin-bottom: 50px;
+}
+
+.about-heading span {
+    font-size: 14px;
+
+    color: #8061b5;
+
+    letter-spacing: 2px;
+}
+
+.about-heading h2 {
+    margin-top: 10px;
+
+    font-size: 50px;
+
+    color: #34234f;
+}
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-content p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #5b4d70;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    background: #eee9ff;
+}
+
+.projects-heading {
+    margin-bottom: 50px;
+}
+
+.projects-heading span {
+    font-size: 14px;
+
+    color: #8061b5;
+
+    letter-spacing: 2px;
+}
+
+.projects-heading h2 {
+    margin-top: 10px;
+
+    font-size: 50px;
+
+    color: #34234f;
+}
+
+.project-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border: 1px solid rgba(128, 97, 181, 0.15);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 40px rgba(80, 55, 120, 0.15);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 23px;
+
+    color: #3d2b63;
+}
+
+.project-card p {
+    line-height: 1.7;
+
+    color: #625572;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    background: #f5f1ff;
+}
+
+.skills-heading {
+    margin-bottom: 50px;
+}
+
+.skills-heading span {
+    font-size: 14px;
+
+    color: #8061b5;
+
+    letter-spacing: 2px;
+}
+
+.skills-heading h2 {
+    margin-top: 10px;
+
+    font-size: 50px;
+
+    color: #34234f;
+}
+
+.skills-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.skill {
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #574477;
+
+    border: 1px solid rgba(128, 97, 181, 0.2);
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+
+    background: #8061b5;
+
+    color: white;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+    width: 100%;
+
+    min-height: 80vh;
+
+    padding: 120px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #eee9ff;
+}
+
+.contact-content {
+    max-width: 800px;
+}
+
+.contact-content span {
+    font-size: 14px;
+
+    color: #8061b5;
+
+    letter-spacing: 2px;
+}
+
+.contact-content h2 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 1;
+
+    margin: 15px 0 25px;
+
+    color: #34234f;
+}
+
+.contact-content p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #5b4d70;
+
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.contact-links a {
+    text-decoration: none;
+
+    color: #69489e;
+
+    font-weight: 600;
+
+    padding: 12px 20px;
+
+    border: 1px solid #8061b5;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #8061b5;
+
+    color: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+
+    padding: 25px 8%;
+
+    text-align: center;
+
+    background: #34234f;
+
+    color: #ddd2f0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar ul {
+        gap: 18px;
+    }
+
+    .home {
+        padding: 100px 6% 50px;
+    }
+
+    .home-contents {
+        width: 55%;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .home {
+        height: 100vh;
+
+        min-height: 650px;
+
+        padding: 100px 7% 40px;
+    }
+
+    .home-video {
+        object-fit: fill;
+    }
+
+    .home-contents {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .home-contents h1 {
+        font-size: 48px;
+    }
+
+    .home-contents p {
+        font-size: 16px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-heading h2,
+    .projects-heading h2,
+    .skills-heading h2 {
+        font-size: 40px;
+    }
+
+    .contact-content h2 {
+        font-size: 55px;
+    }
+}
